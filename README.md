@@ -67,21 +67,6 @@ _The example app demonstrates responsive layouts across different screen orienta
 
 - `BuildContext.responsive<T>(ResponsiveValue<T?> value)` - Extension method for responsive values
 
-#### Example:
-
-```dart
-Widget build(BuildContext context) {
-  final text = context.responsive(ResponsiveValue<String>(
-    xs: 'Mobile text',
-    sm: 'Tablet text',
-    md: 'Desktop text',
-    lg: 'Large desktop text',
-  ));
-
-  return Text(text ?? 'Default text');
-}
-```
-
 ## Installation
 
 Add this to your package's `pubspec.yaml` file:
