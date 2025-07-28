@@ -1,0 +1,23 @@
+name: responsive_breakpoint
+description: "A powerful and intuitive Flutter package for creating responsive layouts with ease. Build beautiful, adaptive UIs that work seamlessly across all screen sizes."
+version: 1.0.0+1
+
+homepage: https://github.com/strawti-apps/responsive_breakpoint
+repository: https://github.com/strawti-apps/responsive_breakpoint
+issue_tracker: https://github.com/strawti-apps/responsive_breakpoint/issues
+
+environment:
+  sdk: ^3.7.2
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
