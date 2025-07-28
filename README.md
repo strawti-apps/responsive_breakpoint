@@ -133,14 +133,14 @@ Widget build(BuildContext context) {
 Widget build(BuildContext context) {
   final text = context.responsive(
     ResponsiveValue<String>(
-			xs: 'Mobile text',
-			sm: 'Tablet text',
-			md: 'Desktop text',
-			lg: 'Large desktop text',
-		),
-	);
+      xs: 'Mobile text',
+      sm: 'Tablet text',
+      md: 'Desktop text',
+      lg: 'Large desktop text',
+    ),
+  );
 
-	return Text(text ?? 'Default text');
+  return Text(text ?? 'Default text');
 }
 ```
 
@@ -152,20 +152,20 @@ Create responsive grid layouts:
 
 ```dart
 ResponsiveFlex(
-	columns: ResponsiveValue<int>(
-		xs: 1,
-		sm: 2,
-		md: 3,
-		lg: 4,
-	),
-	spacing: 16,
-	runSpacing: 16,
-	children: [
-		Card(child: Text('Item 1')),
-		Card(child: Text('Item 2')),
-		Card(child: Text('Item 3')),
-		// ... more items
-	],
+  columns: ResponsiveValue<int>(
+    xs: 1,
+    sm: 2,
+    md: 3,
+    lg: 4,
+  ),
+  spacing: 16,
+  runSpacing: 16,
+  children: [
+    Card(child: Text('Item 1')),
+    Card(child: Text('Item 2')),
+    Card(child: Text('Item 3')),
+    // ... more items
+  ],
 );
 ```
 
@@ -175,12 +175,12 @@ Show/hide widgets based on screen size:
 
 ```dart
 ResponsiveVisibility(
-	visible: ResponsiveValue<bool>(
-		xs: false, // Hidden on mobile
-		sm: false, // Hidden on small tablets
-		md: true, // Visible on tablets and larger
-	),
-	child: Sidebar(),
+  visible: ResponsiveValue<bool>(
+    xs: false, // Hidden on mobile
+    sm: false, // Hidden on small tablets
+    md: true, // Visible on tablets and larger
+  ),
+  child: Sidebar(),
 );
 ```
 
