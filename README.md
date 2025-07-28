@@ -181,7 +181,7 @@ ResponsiveVisibility(
 		md: true, // Visible on tablets and larger
 	),
 	child: Sidebar(),
-)
+);
 ```
 
 #### ResponsiveBuilder
@@ -207,7 +207,7 @@ ResponsiveBuilder<String>(
         return DefaultLayout();
     }
   },
-)
+);
 ```
 
 #### ResponsivePadding
@@ -223,7 +223,7 @@ ResponsivePadding(
     lg: EdgeInsets.all(32),
   ),
   child: YourWidget(),
-)
+);
 ```
 
 #### ResponsiveAxis
@@ -240,7 +240,7 @@ ResponsiveAxis(
     Widget1(),
     Widget2(),
   ],
-)
+);
 ```
 
 #### ResponsivePreferredSizeBuilder
@@ -259,7 +259,7 @@ ResponsivePreferredSizeBuilder<bool>(
       title: Text('My App'),
     );
   },
-)
+);
 ```
 
 #### ResponsiveChild
@@ -272,7 +272,7 @@ ResponsiveChild(
     xs: MobileWidget(),
     md: DesktopWidget(),
   ),
-)
+);
 ```
 
 ## Complete Example
