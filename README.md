@@ -1,4 +1,4 @@
-# Responsive Breakpoint  
+# Responsive Breakpoint
 
 A powerful and intuitive Flutter package for creating responsive layouts with ease. Build beautiful, adaptive UIs that work seamlessly across all screen sizes.
 
@@ -28,7 +28,7 @@ A powerful and intuitive Flutter package for creating responsive layouts with ea
   </table>
 </div>
 
-*The example app demonstrates responsive layouts across different screen orientations using the responsive_breakpoint library.*
+_The example app demonstrates responsive layouts across different screen orientations using the responsive_breakpoint library._
 
 ## Features
 
@@ -38,14 +38,14 @@ A powerful and intuitive Flutter package for creating responsive layouts with ea
 
 ## Breakpoints
 
-| Breakpoint | Width Range | Device Type |
-|------------|-------------|-------------|
-| `xs` | < 600px | Mobile |
-| `sm` | 600px - 959px | Large Mobile / Small Tablet |
-| `md` | 960px - 1279px | Tablet |
-| `lg` | 1280px - 1919px | Desktop |
-| `xl` | 1920px - 2559px | Large Desktop |
-| `xxl` | ≥ 2560px | Ultra-wide Desktop |
+| Breakpoint | Width Range     | Device Type                 |
+| ---------- | --------------- | --------------------------- |
+| `xs`       | < 600px         | Mobile                      |
+| `sm`       | 600px - 959px   | Large Mobile / Small Tablet |
+| `md`       | 960px - 1279px  | Tablet                      |
+| `lg`       | 1280px - 1919px | Desktop                     |
+| `xl`       | 1920px - 2559px | Large Desktop               |
+| `xxl`      | ≥ 2560px        | Ultra-wide Desktop          |
 
 ### Core Classes
 
@@ -77,7 +77,7 @@ Widget build(BuildContext context) {
     md: 'Desktop text',
     lg: 'Large desktop text',
   ));
-  
+
   return Text(text ?? 'Default text');
 }
 ```
@@ -168,6 +168,7 @@ ResponsiveFlex(
 	],
 );
 ```
+
 #### ResponsiveVisibility
 
 Show/hide widgets based on screen size:
@@ -189,23 +190,23 @@ Build widgets conditionally:
 
 ```dart
 ResponsiveBuilder<String>(
-	value: ResponsiveValue<String>(
-		xs: 'mobile',
-		sm: 'tablet',
-		md: 'desktop',
-	),
-	builder: (context, value) {
-		switch (value) {
-			case 'mobile':
-				return MobileLayout();
-			case 'tablet':
-				return TabletLayout();
-			case 'desktop':
-				return DesktopLayout();
-			default:
-				return DefaultLayout();
-		}
-	},
+  value: ResponsiveValue<String>(
+    xs: 'mobile',
+    sm: 'tablet',
+    md: 'desktop',
+  ),
+  builder: (context, value) {
+    switch (value) {
+      case 'mobile':
+        return MobileLayout();
+      case 'tablet':
+        return TabletLayout();
+      case 'desktop':
+        return DesktopLayout();
+      default:
+        return DefaultLayout();
+    }
+  },
 )
 ```
 
@@ -215,14 +216,14 @@ Adaptive padding:
 
 ```dart
 ResponsivePadding(
-	padding: ResponsiveValue<EdgeInsets>(
-		xs: EdgeInsets.all(8),
-		sm: EdgeInsets.all(16),
-		md: EdgeInsets.all(24),
-		lg: EdgeInsets.all(32),
-	),
-	child: YourWidget(),
-);
+  padding: ResponsiveValue<EdgeInsets>(
+    xs: EdgeInsets.all(8),
+    sm: EdgeInsets.all(16),
+    md: EdgeInsets.all(24),
+    lg: EdgeInsets.all(32),
+  ),
+  child: YourWidget(),
+)
 ```
 
 #### ResponsiveAxis
@@ -231,15 +232,15 @@ Switch between Row and Column:
 
 ```dart
 ResponsiveAxis(
-	axis: ResponsiveValue<Axis>(
-		xs: Axis.vertical, // Stack vertically on mobile
-		md: Axis.horizontal, // Side by side on larger screens
-	),
-	children: [
-		Widget1(),
-		Widget2(),
-	],
-);
+  axis: ResponsiveValue<Axis>(
+    xs: Axis.vertical,    // Stack vertically on mobile
+    md: Axis.horizontal,  // Side by side on larger screens
+  ),
+  children: [
+    Widget1(),
+    Widget2(),
+  ],
+)
 ```
 
 #### ResponsivePreferredSizeBuilder
@@ -248,17 +249,17 @@ Responsive app bars:
 
 ```dart
 ResponsivePreferredSizeBuilder<bool>(
-	value: ResponsiveValue<bool>(
-		xs: true, // Show leading on mobile
-		md: false, // Hide on larger screens
-	),
-	builder: (context, showLeading) {
-		return AppBar(
-			automaticallyImplyLeading: showLeading,
-			title: Text('My App'),
-		);
-	},
-);
+  value: ResponsiveValue<bool>(
+    xs: true,   // Show leading on mobile
+    md: false,  // Hide on larger screens
+  ),
+  builder: (context, showLeading) {
+    return AppBar(
+      automaticallyImplyLeading: showLeading,
+      title: Text('My App'),
+    );
+  },
+)
 ```
 
 #### ResponsiveChild
@@ -267,11 +268,11 @@ Conditional child widgets:
 
 ```dart
 ResponsiveChild(
-	child: ResponsiveValue<Widget>(
-		xs: MobileWidget(),
-		md: DesktopWidget(),
-	),
-);
+  child: ResponsiveValue<Widget>(
+    xs: MobileWidget(),
+    md: DesktopWidget(),
+  ),
+)
 ```
 
 ## Complete Example
@@ -313,7 +314,7 @@ class ResponsiveHomePage extends StatelessWidget {
             ),
             child: Sidebar(),
           ),
-          
+
           // Main content
           Expanded(
             child: Padding(
@@ -392,4 +393,5 @@ Contributions are welcome! If you want to contribute to this project, please fol
 3. **Make your changes and submit a pull request.**
 
 ## License
+
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
