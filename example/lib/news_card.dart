@@ -44,12 +44,12 @@ class NewsCard extends StatelessWidget {
     ];
 
     final images = [
-      "https://source.unsplash.com/random/400x300?chip",
-      "https://source.unsplash.com/random/400x300?walking",
-      "https://source.unsplash.com/random/400x300?climate",
-      "https://source.unsplash.com/random/400x300?satellite",
-      "https://source.unsplash.com/random/400x300?quantum",
-      "https://source.unsplash.com/random/400x300?solar",
+      "https://picsum.photos/40/300?random=1",
+      "https://picsum.photos/40/300?random=2",
+      "https://picsum.photos/40/300?random=3",
+      "https://picsum.photos/40/300?random=4",
+      "https://picsum.photos/40/300?random=5",
+      "https://picsum.photos/40/300?random=6",
     ];
 
     final i = index % titles.length;
