@@ -11,17 +11,17 @@ A powerful and intuitive Flutter package for creating responsive layouts with ea
   <table>
     <tr>
       <td align="center">
-        <img src="example/assets/example_portrait.png" alt="Portrait Example" height="315" />
+        <img src="example/assets/example_portrait.png" alt="Portrait Example" height="500" />
         <br><strong>Portrait Mode</strong>
       </td>
       <td align="center">
-        <img src="example/assets/example_square.png" alt="Square Example" height="315" />
+        <img src="example/assets/example_square.png" alt="Square Example" height="500" />
         <br><strong>Square Mode</strong>
       </td>
     </tr>
     <tr>
       <td align="center" colspan="2">
-        <img src="example/assets/example_landscape.png" alt="Landscape Example" height="315" />
+        <img src="example/assets/example_landscape.png" alt="Landscape Example" height="500" />
         <br><strong>Landscape Mode</strong>
       </td>
     </tr>
