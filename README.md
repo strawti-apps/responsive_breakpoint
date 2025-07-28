@@ -116,7 +116,7 @@ final columns = ResponsiveValue<int>(
 
 // Use in your widget
 Widget build(BuildContext context) {
-  final currentColumns = columns.of(context) ?? 1;
+  final currentColumns = context.responsive(columns) ?? 1;
 
   return GridView.builder(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -318,11 +318,11 @@ class ResponsiveHomePage extends StatelessWidget {
           // Main content
           Expanded(
             child: Padding(
-              padding: ResponsiveValue<EdgeInsets>(
+              padding: context.responsive(ResponsiveValue<EdgeInsets>(
                 xs: EdgeInsets.all(16),
                 sm: EdgeInsets.all(24),
                 md: EdgeInsets.all(32),
-              ).of(context) ?? EdgeInsets.all(16),
+              )) ?? EdgeInsets.all(16),
               child: ResponsiveFlex(
                 columns: ResponsiveValue<int>(
                   xs: 1,

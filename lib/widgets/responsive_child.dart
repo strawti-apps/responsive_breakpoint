@@ -7,6 +7,6 @@ class ResponsiveChild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return child.of(context) ?? const SizedBox.shrink();
+    return context.responsive(child) ?? const SizedBox.shrink();
   }
 }
