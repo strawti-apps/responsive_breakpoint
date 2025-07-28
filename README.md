@@ -32,9 +32,9 @@ A powerful and intuitive Flutter package for creating responsive layouts with ea
 
 ## Features
 
--  **Simple Breakpoint System**: 6 predefined breakpoints (xs, sm, md, lg, xl, xxl)
--  **Responsive Values**: Easily define different values for different screen sizes
--  **Adaptive Widgets**: Built-in responsive widgets for common use cases
+- **Simple Breakpoint System**: 6 predefined breakpoints (xs, sm, md, lg, xl, xxl)
+- **Responsive Values**: Easily define different values for different screen sizes
+- **Adaptive Widgets**: Built-in responsive widgets for common use cases
 
 ## Breakpoints
 
@@ -88,13 +88,13 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-	responsive_breakpoint: ^1.0.0
+  responsive_breakpoint: ^1.0.0
 ```
 
 Then run:
 
 ```bash
-flutter  pub  get
+flutter pub get
 ```
 
 ## Usage
@@ -105,21 +105,21 @@ flutter  pub  get
 import  'package:responsive_breakpoint/responsive_breakpoint.dart';
 
 // Define responsive values
-final columns =  ResponsiveValue<int>(
-  xs:  1,
-  sm:  2,
-  md:  3,
-  lg:  4,
-  xl:  5,
-  xxl:  6,
+final columns = ResponsiveValue<int>(
+  xs: 1,
+  sm: 2,
+  md: 3,
+  lg: 4,
+  xl: 5,
+  xxl: 6,
 );
 
 // Use in your widget
-Widget  build(BuildContext context) {
-  final currentColumns = columns.of(context) ??  1;
+Widget build(BuildContext context) {
+  final currentColumns = columns.of(context) ?? 1;
 
-  return  GridView.builder(
-    gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+  return GridView.builder(
+    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: currentColumns,
     ),
   // ... rest of your grid
@@ -130,17 +130,17 @@ Widget  build(BuildContext context) {
 ### Extension Method
 
 ```dart
-Widget  build(BuildContext context) {
-	final text = context.responsive(
-		ResponsiveValue<String>(
-			xs:  'Mobile text',
-			sm:  'Tablet text',
-			md:  'Desktop text',
-			lg:  'Large desktop text',
+Widget build(BuildContext context) {
+  final text = context.responsive(
+    ResponsiveValue<String>(
+			xs: 'Mobile text',
+			sm: 'Tablet text',
+			md: 'Desktop text',
+			lg: 'Large desktop text',
 		),
 	);
 
-	return  Text(text ??  'Default text');
+	return Text(text ?? 'Default text');
 }
 ```
 
@@ -152,22 +152,21 @@ Create responsive grid layouts:
 
 ```dart
 ResponsiveFlex(
-	columns:  ResponsiveValue<int>(
-		xs:  1,
-		sm:  2,
-		md:  3,
-		lg:  4,
+	columns: ResponsiveValue<int>(
+		xs: 1,
+		sm: 2,
+		md: 3,
+		lg: 4,
 	),
-	spacing:  16,
-	runSpacing:  16,
+	spacing: 16,
+	runSpacing: 16,
 	children: [
-		Card(child:  Text('Item 1')),
-		Card(child:  Text('Item 2')),
-		Card(child:  Text('Item 3')),
+		Card(child: Text('Item 1')),
+		Card(child: Text('Item 2')),
+		Card(child: Text('Item 3')),
 		// ... more items
 	],
 );
-
 ```
 #### ResponsiveVisibility
 
@@ -175,12 +174,12 @@ Show/hide widgets based on screen size:
 
 ```dart
 ResponsiveVisibility(
-	visible:  ResponsiveValue<bool>(
-		xs:  false, // Hidden on mobile
-		sm:  false, // Hidden on small tablets
-		md:  true, // Visible on tablets and larger
+	visible: ResponsiveValue<bool>(
+		xs: false, // Hidden on mobile
+		sm: false, // Hidden on small tablets
+		md: true, // Visible on tablets and larger
 	),
-	child:  Sidebar(),
+	child: Sidebar(),
 )
 ```
 
@@ -190,21 +189,21 @@ Build widgets conditionally:
 
 ```dart
 ResponsiveBuilder<String>(
-	value:  ResponsiveValue<String>(
-		xs:  'mobile',
-		sm:  'tablet',
-		md:  'desktop',
+	value: ResponsiveValue<String>(
+		xs: 'mobile',
+		sm: 'tablet',
+		md: 'desktop',
 	),
 	builder: (context, value) {
 		switch (value) {
-			case  'mobile':
-				return  MobileLayout();
-			case  'tablet':
-				return  TabletLayout();
-			case  'desktop':
-				return  DesktopLayout();
+			case 'mobile':
+				return MobileLayout();
+			case 'tablet':
+				return TabletLayout();
+			case 'desktop':
+				return DesktopLayout();
 			default:
-				return  DefaultLayout();
+				return DefaultLayout();
 		}
 	},
 )
@@ -216,13 +215,13 @@ Adaptive padding:
 
 ```dart
 ResponsivePadding(
-	padding:  ResponsiveValue<EdgeInsets>(
-		xs:  EdgeInsets.all(8),
-		sm:  EdgeInsets.all(16),
-		md:  EdgeInsets.all(24),
-		lg:  EdgeInsets.all(32),
+	padding: ResponsiveValue<EdgeInsets>(
+		xs: EdgeInsets.all(8),
+		sm: EdgeInsets.all(16),
+		md: EdgeInsets.all(24),
+		lg: EdgeInsets.all(32),
 	),
-	child:  YourWidget(),
+	child: YourWidget(),
 );
 ```
 
@@ -232,9 +231,9 @@ Switch between Row and Column:
 
 ```dart
 ResponsiveAxis(
-	axis:  ResponsiveValue<Axis>(
-		xs:  Axis.vertical, // Stack vertically on mobile
-		md:  Axis.horizontal, // Side by side on larger screens
+	axis: ResponsiveValue<Axis>(
+		xs: Axis.vertical, // Stack vertically on mobile
+		md: Axis.horizontal, // Side by side on larger screens
 	),
 	children: [
 		Widget1(),
@@ -249,14 +248,14 @@ Responsive app bars:
 
 ```dart
 ResponsivePreferredSizeBuilder<bool>(
-	value:  ResponsiveValue<bool>(
-		xs:  true, // Show leading on mobile
-		md:  false, // Hide on larger screens
+	value: ResponsiveValue<bool>(
+		xs: true, // Show leading on mobile
+		md: false, // Hide on larger screens
 	),
 	builder: (context, showLeading) {
-		return  AppBar(
+		return AppBar(
 			automaticallyImplyLeading: showLeading,
-			title:  Text('My App'),
+			title: Text('My App'),
 		);
 	},
 );
@@ -268,9 +267,9 @@ Conditional child widgets:
 
 ```dart
 ResponsiveChild(
-	child:  ResponsiveValue<Widget>(
-		xs:  MobileWidget(),
-		md:  DesktopWidget(),
+	child: ResponsiveValue<Widget>(
+		xs: MobileWidget(),
+		md: DesktopWidget(),
 	),
 );
 ```
